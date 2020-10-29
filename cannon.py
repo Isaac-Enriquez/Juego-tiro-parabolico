@@ -7,7 +7,7 @@ speed = vector(0, 0)
 targets = []
 
 #Se define una funcion que detalla las caracteristicas
-#de la pelotita roja, la velocidad y posicion de esta
+#del proyectil rojo, la velocidad y posicion de esta
 def tap(x, y):
     "Respond to screen tap."
     if not inside(ball):
