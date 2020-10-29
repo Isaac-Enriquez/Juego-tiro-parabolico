@@ -33,7 +33,10 @@ def draw():
         dot(6, 'red')
 
     update()
-
+    
+#se determinan los puntos objetivos por el proyectil
+#en la funcion se definen posiciones aleatorias
+#y la velocidad de este
 def move():
     "Move ball and targets."
     if randrange(40) == 0:
@@ -42,10 +45,10 @@ def move():
         targets.append(target)
 
     for target in targets:
-        target.x -= 0.5
+        target.x -= 2
 
     if inside(ball):
-        speed.y -= 0.35
+        speed.y -= 1.35
         ball.move(speed)
 
     dupe = targets.copy()
