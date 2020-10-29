@@ -1,8 +1,10 @@
 #A00827133 Andrea Fernanda Molina Blandon
 #A00829207 Isaac Alejandro Enriquez Trejo
+
 from random import randrange
 from turtle import *
 from freegames import vector
+
 
 ball = vector(-200, -200)
 speed = vector(0, 0)
@@ -18,10 +20,13 @@ def tap(x, y):
         speed.x = (x + 480) / 25
         speed.y = (y + 480) / 25
 
+#Esta función detecta si algo está dentro de la pantalla.
+#Retorna True si está dentro de los bordes.
 def inside(xy):
     "Return True if xy within screen."
     return -200 < xy.x < 200 and -200 < xy.y < 200
 
+#Esta función dibuja el proyectil y sus objetivos.
 def draw():
     "Draw ball and targets."
     clear()
@@ -41,16 +46,17 @@ def draw():
 #y la velocidad de este
 def move():
     "Move ball and targets."
+    #Este bloque genera de forma aleatoria nuevos objetivos.
     if randrange(40) == 0:
         y = randrange(-150, 150)
         target = vector(200, y)
         targets.append(target)
 
     for target in targets:
-        target.x -= 2
+        target.x -= 3 #Esta linea modifica la velocidad de los objetivos
 
     if inside(ball):
-        speed.y -= 1.35
+        speed.y -= 1.00 #Esta linea controla la gravedad
         ball.move(speed)
 
     dupe = targets.copy()
@@ -62,9 +68,12 @@ def move():
 
     draw()
 
+    #Este bloque de código hace que el juego no acabe
+    #cuando se sale de los límites una bolita y en cambio
+    #lo pone en el inicio de nuevo a la misma altura.
     for target in targets:
         if not inside(target):
-            return
+            target.x = 200
 
     ontimer(move, 50)
 
