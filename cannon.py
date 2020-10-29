@@ -6,13 +6,15 @@ ball = vector(-200, -200)
 speed = vector(0, 0)
 targets = []
 
+#Se define una funcion que detalla las caracteristicas
+#de la pelotita roja, la velocidad y posicion de esta
 def tap(x, y):
     "Respond to screen tap."
     if not inside(ball):
         ball.x = -199
         ball.y = -199
-        speed.x = (x + 200) / 25
-        speed.y = (y + 200) / 25
+        speed.x = (x + 480) / 25
+        speed.y = (y + 480) / 25
 
 def inside(xy):
     "Return True if xy within screen."
