@@ -6,6 +6,11 @@
 - Andrea Fernanda Molina Blandon A00827133
 - Isaac Alejandro Enriquez Trejo A00829207
 
+# GIT
+Sistema de control de versiones, el cual registra los cambios de un codigo durante el desarrollo de este. 
+En este caso, se llevo el registro de juego "canon" de Freegames del lenguaje de programación Python. 
+
+### Actividad 4: Tiro parabolico
 
 ¿Qué hace el .py?
 -----------------
@@ -35,5 +40,3 @@ De esta forma las bolas azules simplemente reaparecen al lado derecho de la
 pantalla y el juego continua de forma indefinida. Se puso que x=200 debido a
 que las dimensiones del juego se ubican en un plano cartesiano que va desde
 -200 hasta +200 tanto en 'X', así como en 'Y'.
-
-
